@@ -24,7 +24,7 @@ export const Header = ({ menubarIcon, logo, shoppingCart, user, listItems }: Hea
                 <button type="button" className="mobile-menu-toggle">
                     <Image src={menubarIcon} alt="Menu Bar" />
                 </button>
-                <div onClick = {() => router.push('/')} className="header__logo">
+                <div onClick={() => router.push('/')} className="header__logo">
                     <a className="header__logo__link">
                         <figure>
                             <Image src={logo} alt="Plant Milk Makers" />
@@ -39,5 +39,3 @@ export const Header = ({ menubarIcon, logo, shoppingCart, user, listItems }: Hea
         </header>
     )
 }
-
-// export default Header;

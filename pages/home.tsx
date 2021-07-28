@@ -23,15 +23,15 @@ const sliderItems = [
     },
     {
         id: shortid.generate(),
-        title: `Premium branded reusable Yp tp`,
-        excerpt: `Protect the environment, keep milk fresher and tastier longer. Beautifully designed branding acknowledging your homemade-DIY efforts.`,
-        image: images.Product1
+        title: `3D Strainer Plant Milk Maker`,
+        excerpt: `Make plantmilks in your kitchen in minutes without the harmful additives found in commercial plant milks or the messiness of DIY nut bags.`,
+        image: images.heroImage2
     },
     {
         id: shortid.generate(),
-        title: `Premium branded reusable bottles`,
-        excerpt: `Protect the environment, keep milk fresher and tastier longer. Beautifully designed branding acknowledging your homemade-DIY efforts.`,
-        image: images.Product2
+        title: `Plant Milk Maker Ingredients`,
+        excerpt: `Get the freshest ready to use plant milk making ingredients. Choose from 10 bulk or single use pod milk making ingredients.`,
+        image: images.heroImage3
     },
 ]
 
@@ -98,7 +98,7 @@ const whyUsData = {
     homeData: {
         id: shortid.generate(),
         excerpt: `Making homemade plant milks with nut bags or cheese cloth offer less than optimal experience and results. The 3D Strainer is significantly faster and most effective in extracting milk from ingredient's pulp.`,
-        image: images.Product1,
+        image: images.homeSectionImage,
         features: [
             {
                 id: shortid.generate(),

@@ -9,6 +9,10 @@ import Product4 from './product4.png';
 import recipe1 from './recipe1.png';
 import recipe2 from './recipe2.png';
 import recipe3 from './recipe3.png';
+import heroImage2 from './hero-image-22.png'
+import heroImage3 from './hero3_img.svg'
+import homeSectionImage from './homeSectionImage.png'
+
 // import cardImage from './card-image.png'
 
 
@@ -82,7 +86,10 @@ const images = {
     products,
     recipe1,
     recipe2,
-    recipe3
+    recipe3,
+    heroImage2,
+    heroImage3,
+    homeSectionImage
 }
 
 const icons = {

@@ -1,31 +1,31 @@
 import Image from 'next/image'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 interface CategoryItem {
     item: {
         id: string,
-    label: string,
-    image: any,
-    title: string,
-    excerpt: string,
-    oldPrice: number,
-    newPrice: number
+        label: string,
+        image: any,
+        title: string,
+        excerpt: string,
+        oldPrice: number,
+        newPrice: number
     }
 }
 
-export const CategoryCard = ({item} : CategoryItem ) => {
+export const CategoryCard = ({ item }: CategoryItem) => {
 
     const router = useRouter()
 
     return (
-        <div onClick = {() => router.push('/product-details')} className="ingredient">
+        <div onClick={() => router.push('/product-details')} className="ingredient">
             <a>
                 <div className="ingredient__label">
                     {item.label}
                 </div>
                 <div className="ingredient__image">
                     <figure>
-                        <Image src={item.image} alt = {item.title}/>
+                        <Image src={item.image} alt={item.title} />
                     </figure>
                 </div>
                 <div className="ingredient__title">
@@ -44,7 +44,7 @@ export const CategoryCard = ({item} : CategoryItem ) => {
                     </p>
                 </div>
                 <div className="ingredient__overlay">
-                    <button onClick = {() => router.push('/shop')} className="btn-white">
+                    <button onClick={() => router.push('/shop')} className="btn-white">
                         ADD TO CART
                     </button>
                 </div>
