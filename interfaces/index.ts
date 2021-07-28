@@ -21,6 +21,7 @@ export interface ProductInfo {
     productLabel: string,
     oldPrice: number,
     newPrice: number,
+    category?: string,
     productDescription: string,
     href?: string
 }

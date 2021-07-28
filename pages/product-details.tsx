@@ -5,7 +5,7 @@ import { ShopBanner } from '../components/Shop/shop-banner';
 import { RecentNewsSection } from '../components/UI/recent-news-section';
 import { Footer } from '../components/UI/footer';
 import { Features } from '../components/Shop/features';
-
+import {productDetails as productInfo} from '../data'
 
 
 import { icons, images } from '../public/images';
@@ -40,7 +40,7 @@ interface ProductInfo {
     }
 }
 
-const ProductDetails = ({ productInfo }: ProductInfo) => {
+const ProductDetails = () => {
 
     let mainVariant = productInfo.productVariants.find((variant) => variant.isMainVariant === true);
     const [activeProduct, setActiveProduct] = useState(mainVariant)
@@ -169,10 +169,10 @@ const ProductDetails = ({ productInfo }: ProductInfo) => {
                             <div className="tabs__links">
                                 <ul>
                                     <li>
-                                        <a href="#" className="active">Product Details</a>
+                                        <a className="active">Product Details</a>
                                     </li>
                                     <li>
-                                        <a href="#">Reviews</a>
+                                        <a>Reviews</a>
                                     </li>
                                 </ul>
                             </div>

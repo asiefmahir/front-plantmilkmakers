@@ -161,3 +161,8 @@ export const productDetails = {
             },
         ]
 }
+
+const products = {
+    id: shortid.generate(),
+    mainProductTitle: ``
+}

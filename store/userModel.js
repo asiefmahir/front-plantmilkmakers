@@ -15,7 +15,7 @@ export const userModel =
             state.userInfo.password = payload.password;
             state.userInfo.shippingAddress = {
                 streetAddress: payload.streetAddress,
-                apartment: payload.apartment,
+                apartment: payload.apartment|| '',
                 city: payload.city,
                 State: payload.State
             }

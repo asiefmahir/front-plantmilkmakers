@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import {useSwipeable} from 'react-swipeable'
+
 
 
 export const Carousel = ({sliderItems}) => {
@@ -9,8 +11,30 @@ export const Carousel = ({sliderItems}) => {
     const [activeSlider, setActiveSlider] = useState(sliderItems[0])
 
     const router = useRouter()
+
+    const handlers = useSwipeable({
+        onSwipedLeft: (e) => {
+            if(index === 0) {
+                setIndex(2)
+                setActiveSlider(sliderItems[index])
+                return
+            }
+            setIndex((prev) => prev - 1)
+            setActiveSlider(sliderItems[index])
+        },
+        onSwipedRight: (e) => {
+            if(index === 2) {
+                setIndex(0);
+                setActiveSlider(sliderItems[index])
+                return
+            }
+            setIndex((prev) => prev + 1)
+            setActiveSlider(sliderItems[index])
+        }
+    })
+
     return (
-        <div className="banner">
+        <div {...handlers} className="banner" >
         <div className="slider">
 
             <div className="slider__item">

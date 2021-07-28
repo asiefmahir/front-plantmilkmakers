@@ -14,6 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "public/images/index.js", "pages/_document.tsx", "store/cartModel.js", "store/userModel.js", "store/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "public/images/index.js", "pages/_document.tsx", "store/cartModel.js", "store/userModel.js", "store/index.js", "store/categoryModel.js", "store/userModel.js", "store/recentViewedProducts.js"],
   "exclude": ["node_modules"]
 }

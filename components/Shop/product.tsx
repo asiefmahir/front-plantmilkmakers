@@ -1,11 +1,13 @@
 import Image from 'next/image'
+import { useStoreActions } from 'easy-peasy'
+
 import { images } from '../../public/images'
 
 import { ProductProps } from '../../interfaces'
 
 
 export const Product = ({index, productDetails }: ProductProps) => {
-    console.log(`section ${index === 2  && 'section--grey'}`);
+    const addToCart = useStoreActions((actions: any) => actions.cart.addToCart)
     
     return (
         <div className= {`section ${index === 2  && 'section--grey'}`}>
@@ -41,7 +43,7 @@ export const Product = ({index, productDetails }: ProductProps) => {
                             {productDetails.productDescription}
                         </p>
                         <div className="product__details__action">
-                            <button className="btn-big btn-outline-green">
+                            <button onClick = {() => addToCart({id: productDetails.id, title: productDetails.productTitle, image: productDetails.productImage, unitPrice: productDetails.newPrice})} className="btn-big btn-outline-green">
                                 Add to Cart
                             </button>
                             <button className="btn-big btn-green">BUY NOW</button>

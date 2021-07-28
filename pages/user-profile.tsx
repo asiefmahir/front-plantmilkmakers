@@ -74,7 +74,7 @@ const orders = [
 const cartProducts = [
     {
         id: shortid.generate(),
-        image: images.cardImage,
+        image: images.Product1,
         title: 'Product 1',
         price: 25.00
     },
@@ -275,9 +275,9 @@ const UserProfile = () => {
                                 </li>
                             </ul>
                         </div>
-                        {activeTab === 'Profile' && <ProfileSettings user = {user}/>}
+                        {activeTab === 'Profile' && <ProfileSettings userData = {user}/>}
                         {activeTab === "My Order History" && <OrderHistory orders={orders}/>}
-                        {activeTab === "My Cart" && <Cart cartProducts = {cartProducts} />}
+                        {activeTab === "My Cart" && <Cart />}
                         {activeTab === "Recent Viewed products" && <RecentViewsProducts categories = {categoryItems} />}
                     </div>
                 </div>

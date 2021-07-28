@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { useStoreState } from 'easy-peasy';
+
 import { Features } from '../components/Shop/features';
 import { ShopBanner } from '../components/Shop/shop-banner';
 import { Footer } from '../components/UI/footer';
@@ -7,6 +9,13 @@ import { images, icons } from '../public/images';
 import { features, footerInfo, listItems } from './shop';
 
 const OrderSuccess = () => {
+
+    const orderInfo = useStoreState((state : any) => state.order.order);
+    console.log(orderInfo);
+    
+    const cartItems = useStoreState((state: any) => state.cart.items);
+
+
     return (
         <div>
             <Header menubarIcon={icons.menubarIcon} logo={icons.logo} shoppingCart={icons.shoppingCart} user={icons.user} listItems={listItems} />
@@ -19,30 +28,30 @@ const OrderSuccess = () => {
                         </figure>
                         <p>
                             Thank you. Your order has been received. Please check
-                            <a href="#"> Your Mail </a> to see the Order Invoice
+                            <a> Your Mail </a> to see the Order Invoice
                         </p>
                     </div>
                     <div className="total-details">
                         <div className="grid five gap-20">
                             <div className="grid__item">
                                 <span> ORDER NUMBER: </span>
-                                <h5>XRQ4567</h5>
+                                <h5>{orderInfo.id}</h5>
                             </div>
                             <div className="grid__item">
                                 <span> DATE: </span>
-                                <h5>April 22, 2021</h5>
+                                <h5>{orderInfo.date}</h5>
                             </div>
                             <div className="grid__item">
                                 <span> EMAIL: </span>
-                                <h5>customer@demo.com</h5>
+                                <h5>{orderInfo.userEmail}</h5>
                             </div>
                             <div className="grid__item">
                                 <span> TOTAL: </span>
-                                <h5>$143.00</h5>
+                                <h5>${orderInfo.totalPrice}</h5>
                             </div>
                             <div className="grid__item">
                                 <span> PAYMENT METHOD: </span>
-                                <h5>Credit Card</h5>
+                                <h5>{orderInfo.paymentMethod}</h5>
                             </div>
                         </div>
                     </div>
@@ -52,16 +61,16 @@ const OrderSuccess = () => {
                         </div>
                         <ul>
                             <li>
-                                <h5>Price (4 items)</h5>
-                                <span> $ 128.60 </span>
+                                <h5>Price ({Object.keys(cartItems).length} items)</h5>
+                                <span> $ {orderInfo.grossPrice} </span>
                             </li>
                             <li>
                                 <h5>Delivery Charge</h5>
-                                <span> $ 15.00 </span>
+                                <span> $ {orderInfo.deliveryCharge} </span>
                             </li>
                             <li>
                                 <h5>Delivery Charge</h5>
-                                <span> $ 143.00 </span>
+                                <span> $ {orderInfo.totalPrice} </span>
                             </li>
                         </ul>
                     </div>
@@ -69,16 +78,18 @@ const OrderSuccess = () => {
                         <ul>
                             <li>
                                 <h5>Shipping Method</h5>
-                                <span> Ups Ground </span>
+                                <span> {orderInfo.shippingMethod} </span>
                             </li>
                             <li>
                                 <h5>Payment Method</h5>
-                                <span> Credit Card </span>
+                                <span> {orderInfo.paymentMethod} </span>
                             </li>
-                            <li>
+                            {orderInfo.deliveryNote && (
+                                <li>
                                 <h5>Delivery Notes</h5>
-                                <span> Lorem Ipsum demo text </span>
+                                <span> {orderInfo.deliveryNote} </span>
                             </li>
+                            )}
                         </ul>
                     </div>
                 </div>

@@ -3,6 +3,8 @@ import Image from 'next/image';
 import {useRouter} from 'next/router'
 import { useState } from 'react';
 import shortid from 'shortid';
+import {useSwipeable} from 'react-swipeable'
+
 import { Carousel } from '../components/Home/carousel';
 import { ShopCategories } from '../components/Shop/categories';
 import { Footer } from '../components/UI/footer';
@@ -247,10 +249,10 @@ const PlantMilkMakersHome = () => {
                             <div className="tabs__links">
                                 <ul>
                                     <li onClick = {() => setSelectedMilkingMethod(whyUsData.storeData)}>
-                                        <a className= {selectedMilkingMethod.id === whyUsData.storeData.id ? "active" : "" } >I Buy in Store</a>
+                                        <a className= {selectedMilkingMethod.id === whyUsData.storeData.id ? "active first" : "first" } >I Buy in Store</a>
                                     </li>
                                     <li onClick = {() => setSelectedMilkingMethod(whyUsData.homeData)}>
-                                        <a className= {selectedMilkingMethod.id === whyUsData.homeData.id ? "active" : "" }>I Make at Home</a>
+                                        <a className= {selectedMilkingMethod.id === whyUsData.homeData.id ? "active second" : "second" }>I Make at Home</a>
                                     </li>
                                 </ul>
                             </div>
