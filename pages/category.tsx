@@ -138,21 +138,21 @@ export const recentNewsInfo = {
         },
         {
             id: shortid.generate(),
-            title: `5 Reason glass bottles are better than plastic`,
+            title: `Diary industry claims identity theft`,
             excerpt: `Duis pretium gravida enim, vel maximus ligula a. Sed rhoncus eget.`,
-            image: images.cardImage
+            image: images.newsImageTwo
         },
         {
             id: shortid.generate(),
-            title: `5 Reason glass bottles are better than plastic`,
+            title: `Which plant milk wins most sustainable`,
             excerpt: `Duis pretium gravida enim, vel maximus ligula a. Sed rhoncus eget.`,
-            image: images.cardImage
+            image: images.newsImageThree
         },
         {
             id: shortid.generate(),
-            title: `5 Reason glass bottles are better than plastic`,
+            title: `A guide to plant milk coffee creamers`,
             excerpt: `Duis pretium gravida enim, vel maximus ligula a. Sed rhoncus eget.`,
-            image: images.cardImage
+            image: images.newsImageFour
         },
     ]
 }

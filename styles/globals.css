@@ -608,6 +608,9 @@ img {
 .card__image {
   margin: -20px -20px 20px;
 }
+.card__image .card__figure div {
+  width: 100%;
+}
 
 .card__image img {
   border-radius: 5px 5px 0 0;
@@ -710,8 +713,8 @@ img {
 }
 
 .grid.two {
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2]; 
 }
 
 @media screen and (max-width: 640px) {
@@ -3596,8 +3599,8 @@ textarea.custom-input {
 }
 
 .account-setting__content .product-table-container img {
-  max-width: 89.993px;
-  max-height: 89.993px;
+  max-width: 89.993px !important;
+  max-height: 89.993px !important;
 }
 
 .account-setting__content .product-table-container .product-img {

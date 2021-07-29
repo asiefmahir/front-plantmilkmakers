@@ -23,7 +23,7 @@ export const RecentNewsSection = ({icon, title, iconText, cardItems}: RecentNews
                     {title}
                 </div>
                 <div className="section__head__link">
-                    <a href="#">
+                    <a>
                       {iconText}
                       <Image src={icon} alt="" />
                     </a>

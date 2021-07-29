@@ -45,3 +45,54 @@ export interface FeatureItemProps {
     icon: any,
     title: string
 }
+
+export interface Product {
+    id: string,
+    labels?: string[]
+    category: string,
+    images: string[],
+    tags: string[],
+    coupons?: Coupon[]
+    title: string,
+    description: string,
+    brand: string,
+    specification: any,
+    variants: ProductVariant[],
+    isPublished: boolean,
+    ratings: Rating[],
+    collections?: string[]
+}
+
+interface Rating {
+    id: string,
+    review: string,
+    userId: string,
+    productId: string,
+    rating: number
+}
+
+interface Coupon {
+    id: string
+    code: string
+    description: string
+    type: string
+    amount: number
+    startdate: Date
+    endDate: Date
+    maxUsage: number
+    minSpend: number
+    applyToSalePrice: boolean
+    combinedWithOtherCoupons: boolean
+    freeShiping: boolean
+    isActive: boolean
+}
+
+export interface ProductVariant {
+    id: string,
+    title: string,
+    availableStock: number,
+    availableDiscount: number,
+    sku: string,
+    currentPrice: number,
+    isPublished: boolean
+}

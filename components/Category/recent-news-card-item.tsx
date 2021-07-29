@@ -13,7 +13,7 @@ export const RecentNewsCardItem = ({id, title, excerpt, image}: RecentNewsCardIt
         <div className="card">
         <a href="#">
             <div className="card__image">
-                <figure>
+                <figure className= "card__figure">
                     <Image src= {image} alt = {title} />
                 </figure>
             </div>

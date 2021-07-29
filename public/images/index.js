@@ -11,7 +11,12 @@ import recipe2 from './recipe2.png';
 import recipe3 from './recipe3.png';
 import heroImage2 from './hero-image-22.png'
 import heroImage3 from './hero3_img.svg'
-import homeSectionImage from './homeSectionImage.png'
+import homeSectionImage from './homeSectionImage.png';
+import newsImageTwo from './news2_img.jpg'
+import newsImageThree from './news3_img.jpg'
+import newsImageFour from './news4_img.jpg'
+
+
 
 // import cardImage from './card-image.png'
 
@@ -89,7 +94,10 @@ const images = {
     recipe3,
     heroImage2,
     heroImage3,
-    homeSectionImage
+    homeSectionImage,
+    newsImageTwo,
+    newsImageThree,
+    newsImageFour
 }
 
 const icons = {

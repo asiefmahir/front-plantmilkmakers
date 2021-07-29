@@ -298,7 +298,7 @@ const PlantMilkMakersHome = () => {
                             <div className="card card--recipe">
                                 <a href="#">
                                     <div className="card__image">
-                                        <figure>
+                                        <figure className = "card__figure"> 
                                             <Image src={images.recipe1} alt = "" />
                                         </figure>
                                     </div>
@@ -312,7 +312,7 @@ const PlantMilkMakersHome = () => {
                             <div className="card card--recipe">
                                 <a href="#">
                                     <div className="card__image">
-                                        <figure>
+                                        <figure className = "card__figure">
                                             <Image src={images.recipe2} alt = "" />
                                         </figure>
                                     </div>
@@ -326,7 +326,7 @@ const PlantMilkMakersHome = () => {
                             <div className="card card--recipe">
                                 <a href="#">
                                     <div className="card__image">
-                                        <figure>
+                                        <figure className = "card__figure">
                                             <Image src= {images.recipe3} alt = "" />
                                         </figure>
                                     </div>
